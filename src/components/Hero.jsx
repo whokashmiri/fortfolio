@@ -1,6 +1,6 @@
 import BlueTool from "../assets/BlueTool.avif";
 import GreenCube from "../assets/GreenCube.avif";
-import GreenPillow from "../assets/GreenPillow.avif";
+import PowderBlueStar from "../assets/PowderBlueStar.avif";
 import GreenTool from "../assets/GreenTool.avif";
 import OrangBall from "../assets/OrangBall.avif";
 import PowderBlueCube from "../assets/PowderBlueCube.avif";
@@ -26,7 +26,7 @@ const Hero = () => {
 
         {/* Flip Image */}
         <div className="relative z-50 group perspective">
-          <div className="relative w-48 h-48 rounded-3xl preserve-3d group-hover:rotate-y-180 duration-700">
+          <div className="relative w-72 h-72 rounded-3xl preserve-3d group-hover:rotate-y-180 duration-700">
             {/* Front */}
             <div className="absolute backface-hidden w-full h-full">
               <img
@@ -47,30 +47,28 @@ const Hero = () => {
         </div>
 
         {/* Circular Layout for Side Images */}
-        <div className="absolute top-1/2 left-1/2 ">
-          {[
-            { src: GreenTool, alt: "Image 1", animation: "animate-smoothBounce" },
-            { src: OrangBall, alt: "Image 2", animation: "animate-smoothBounce" },
-            { src: GreenPillow, alt: "Image 3", animation: "animate-smoothBounce" },
-            { src: PowderBlueCube, alt: "Image 4", animation: "animate-smoothBounce" },
-            { src: GreenCube, alt: "Image 5", animation: "animate-smoothBounce" },
-            { src: BlueTool, alt: "Image 6", animation: "animate-smoothBounce" },
-          ].map((image, index) => (
-            <div
-              key={index}
-              className={`absolute w-48 h-48 ${image.animation}`}
-              style={{
-                transform: `rotate(${index * 60}deg) translate(250px) rotate(-${index * 60}deg)`,
-              }}
-            >
-              <img
-                src={image.src}
-                alt={image.alt}
-                className="w-48 h-48 object-cover rounded-full"
-              />
-            </div>
-          ))}
-        </div>
+        <div className="absolute flex justify-between w-screen h-screen overflow-y-auto">
+  {/* First set of images */}
+  <div className="relative flex flex-col items-center justify-center w-1/2">
+    <div className="flex flex-col items-center -space-y-16"> {/* Overlapping images */}
+      <img src={BlueTool} alt="Blue Tool" className="w-72 h-72 ml-24 mt-20 z-10 animate-bounce1 " />
+      <img src={OrangBall} alt="Orange Ball" className="w-72 h-72 z-20 " />
+      <img src={GreenCube} alt="Green Cube" className="w-72 h-72 ml-24 z-30 " />
+    </div>
+  </div>
+  {/* Second set of images */}
+  <div className="relative flex flex-col items-center justify-center w-1/2 ">
+    <div className="flex flex-col items-center -space-y-16"> {/* Overlapping images */}
+      <img src={PowderBlueStar} alt="Blue Star" className="w-72 h-72 mr-24 " />
+      <img src={PowderBlueCube} alt="Blue Cube" className="w-72 h-72 z-20 " />
+      <img src={GreenTool} alt="Green Tool" className="w-72 h-72 mr-24 z-30 " />
+    </div>
+  </div>
+</div>
+
+
+
+
       </div>
     </section>
   );

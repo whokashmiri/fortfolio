@@ -5,6 +5,10 @@
     box-sizing: border-box;
     color: black;
     font-family: 'Montserrat';
+   
+}
+body{
+    background-color: rgb(83, 82, 82) 
 }
 
 
