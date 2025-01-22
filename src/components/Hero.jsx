@@ -38,7 +38,7 @@ const Hero = () => {
             {/* Back */}
             <div className="absolute backface-hidden rotate-y-180 w-full h-full flex items-center justify-center bg-gray-700 rounded-3xl">
               <div className="text-center text-white font-bold text-xl md:text-2xl">
-                <div className="border-2 border-white rounded-3xl p-4">
+                <div className="border-2 border-white justify-center items-center rounded-3xl h-72 p-4">
                   WANNA KNOW MORE? SCROLL DOWN...
                 </div>
               </div>
@@ -52,16 +52,16 @@ const Hero = () => {
   <div className="relative flex flex-col items-center justify-center w-1/2">
     <div className="flex flex-col items-center -space-y-16"> {/* Overlapping images */}
       <img src={BlueTool} alt="Blue Tool" className="w-72 h-72 ml-24 mt-20 z-10 animate-bounce1 " />
-      <img src={OrangBall} alt="Orange Ball" className="w-72 h-72 z-20 " />
-      <img src={GreenCube} alt="Green Cube" className="w-72 h-72 ml-24 z-30 " />
+      <img src={OrangBall} alt="Orange Ball" className="w-72 h-72 z-20 animate-bounce2" />
+      <img src={GreenCube} alt="Green Cube" className="w-72 h-72 ml-24 z-30 animate-bounce3" />
     </div>
   </div>
   {/* Second set of images */}
   <div className="relative flex flex-col items-center justify-center w-1/2 ">
     <div className="flex flex-col items-center -space-y-16"> {/* Overlapping images */}
-      <img src={PowderBlueStar} alt="Blue Star" className="w-72 h-72 mr-24 " />
-      <img src={PowderBlueCube} alt="Blue Cube" className="w-72 h-72 z-20 " />
-      <img src={GreenTool} alt="Green Tool" className="w-72 h-72 mr-24 z-30 " />
+      <img src={PowderBlueStar} alt="Blue Star" className="w-72 h-72 mr-24 animate-bounce4" />
+      <img src={PowderBlueCube} alt="Blue Cube" className="w-72 h-72 z-20 animate-bounce5 " />
+      <img src={GreenTool} alt="Green Tool" className="w-72 h-72 mr-24 z-30 animate-bounce6" />
     </div>
   </div>
 </div>

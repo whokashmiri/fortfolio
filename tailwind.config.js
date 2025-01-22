@@ -8,8 +8,6 @@ export default {
     extend: {
       animation: {
         scroll: "scroll 15s linear infinite",
-        smoothBounce: "smoothBounce 2s infinite",
-
 
         bounce1: "bounce1 2s infinite",
         bounce2: "bounce2 2.5s infinite",
@@ -20,19 +18,9 @@ export default {
 
       },
       keyframes: {
-        scroll: {
-          "0%": { transform: "translateX(0)" },
-          "100%": { transform: "translateX(-200%)" },
-        },
-        smoothBounce: {
-          "0%, 100%": {
-            transform: "translateY(0)",
-            animationTimingFunction: "ease-in-out",
-          },
-          "50%": {
-            transform: "translateY(-20px)",
-            animationTimingFunction: "ease-in-out",
-          },
+         scroll: {
+           "0%": { transform: "translateX(0)" },
+           "100%": { transform: "translateX(-200%)" },
         },
 
 
@@ -44,7 +32,7 @@ export default {
         },
         bounce2: {
           "0%, 100%": { transform: "translateY(0)" },
-          "50%": { transform: "translateY(-25px)" },
+          "50%": { transform: "scale(1.1)" },
         },
         bounce3: {
           "0%, 100%": { transform: "translateY(0)" },
@@ -56,7 +44,7 @@ export default {
         },
         bounce5: {
           "0%, 100%": { transform: "translateY(0)" },
-          "50%": { transform: "translateY(-10px)" },
+          "50%": { transform: "scale(1.1)" },
         },
         bounce6: {
           "0%, 100%": { transform: "translateY(0)" },
