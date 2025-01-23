@@ -8,10 +8,11 @@
    
 }
 body{
-    background-color: rgb(83, 82, 82) 
+    background-color: white; 
 }
 
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+

@@ -4,11 +4,26 @@ import PowderBlueStar from "../assets/PowderBlueStar.avif";
 import GreenTool from "../assets/GreenTool.avif";
 import OrangBall from "../assets/OrangBall.avif";
 import PowderBlueCube from "../assets/PowderBlueCube.avif";
+import { useEffect } from "react";
+import Aaqib from '../assets/IMG_20180124_130547.jpg'
 
 const Hero = () => {
+  useEffect(() => {
+    const image = document.querySelector('.bending-image');
+    const handleMouseMove = (e) => {
+      const { clientX, clientY } = e;
+      const { innerWidth, innerHeight } = window;
+      const rotateX = (clientY / innerHeight - 0.7) * 60;
+      const rotateY = (clientX / innerWidth - 0.7) * -60;
+      image.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+    };
+    window.addEventListener('mousemove', handleMouseMove);
+    return () => {
+      window.removeEventListener('mousemove', handleMouseMove);
+    };
+  }, []);
   return (
     <section className="relative w-full h-screen overflow-hidden">
-      {/* Hero Background with Infinite Marquee */}
       <div className="absolute inset-0 z-0">
         <div className="relative w-full h-full flex items-center">
           <div className="absolute w-full animate-scroll whitespace-nowrap">
@@ -19,32 +34,24 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Content */}
+      
       <div className="relative z-10 flex flex-col items-center justify-center w-full h-full">
-        {/* "Hi, I am Aaqib" */}
-        <h2 className="text-4xl font-semibold text-black mb-4">Hi, I am Aaqib</h2>
+        <h2 className="text-4xl font-semibold text-black mb-4">Hi, I am <span className="font-normal text-teal-500">
+        Aaqib
+          </span> </h2>
 
-        {/* Flip Image */}
-        <div className="relative z-50 group perspective">
-          <div className="relative w-72 h-72 rounded-3xl preserve-3d group-hover:rotate-y-180 duration-700">
-            {/* Front */}
-            <div className="absolute backface-hidden w-full h-full">
-              <img
-                src="https://images.pexels.com/photos/30142098/pexels-photo-30142098/free-photo-of-cozy-cafe-latte-with-frothy-milk-art.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-                alt="Aaqib"
-                className="w-full h-full object-cover rounded-3xl"
-              />
-            </div>
-            {/* Back */}
-            <div className="absolute backface-hidden rotate-y-180 w-full h-full flex items-center justify-center bg-gray-700 rounded-3xl">
-              <div className="text-center text-white font-bold text-xl md:text-2xl">
-                <div className="border-2 border-white justify-center items-center rounded-3xl h-72 p-4">
-                  WANNA KNOW MORE? SCROLL DOWN...
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+   
+
+        <div className="relative w-72 h-72  shadow-2xl bending-image z-10">
+          <img
+        src={Aaqib}
+        alt="Aaqib"
+        className="w-full h-full object-cover rounded-3xl bending-image"
+          />
+         </div>
+       
+      
+
 
         {/* Circular Layout for Side Images */}
         <div className="absolute flex justify-between w-screen h-screen overflow-y-auto">
