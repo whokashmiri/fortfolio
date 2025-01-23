@@ -1,5 +1,6 @@
 import Hero from "./components/Hero"
 import Navbar from "./components/Navbar"
+import HoverReveal from "./components/Prac/HoverReveal"
 
 
 
@@ -8,6 +9,7 @@ const App = () => {
     <div >
         <Navbar/>
         <Hero/>
+        <HoverReveal/>
     
     </div>
   )
