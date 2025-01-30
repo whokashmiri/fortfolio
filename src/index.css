@@ -1,14 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Oswald:wght@200..700&family=Roboto+Mono&family=Space+Grotesk:wght@300..700&display=swap');
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    color: black;
-    font-family: 'Montserrat';
+    font-family: "Space Grotesk", serif;
+    /* font-family: 'Montserrat'; */
+    
    
 }
 body{
-    background-color: white; 
+    background-color: rgb(0, 0, 0); 
+    color: white;
 }
 
 

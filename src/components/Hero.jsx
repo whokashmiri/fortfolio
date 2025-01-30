@@ -1,83 +1,20 @@
-import BlueTool from "../assets/BlueTool.avif";
-import GreenCube from "../assets/GreenCube.avif";
-import PowderBlueStar from "../assets/PowderBlueStar.avif";
-import GreenTool from "../assets/GreenTool.avif";
-import OrangBall from "../assets/OrangBall.avif";
-import PowderBlueCube from "../assets/PowderBlueCube.avif";
-import { useEffect } from "react";
-import Aaqib from '../assets/IMG_20180124_130547.jpg'
-
 const Hero = () => {
-  useEffect(() => {
-    const image = document.querySelector('.bending-image');
-    const handleMouseMove = (e) => {
-      const { clientX, clientY } = e;
-      const { innerWidth, innerHeight } = window;
-      const rotateX = (clientY / innerHeight - 0.7) * 60;
-      const rotateY = (clientX / innerWidth - 0.7) * -60;
-      image.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
-    };
-    window.addEventListener('mousemove', handleMouseMove);
-    return () => {
-      window.removeEventListener('mousemove', handleMouseMove);
-    };
-  }, []);
   return (
-    <section className="relative w-full h-screen overflow-hidden">
-      <div className="absolute inset-0 z-0">
-        <div className="relative w-full h-full flex items-center">
-          <div className="absolute w-full animate-scroll whitespace-nowrap">
-            <h1 className="text-[12rem] font-extrabold text-black tracking-wider text-center">
-              AAQIB BASHIR MIR &nbsp; AAQIB BASHIR MIR &nbsp; AAQIB BASHIR MIR
-            </h1>
-          </div>
-        </div>
+    <div className="flex flex-col items-center justify-center h-[90vh] text-center px-4">
+      {/* Availability Section */}
+      <div className="flex items-start gap-1 py-2 rounded-lg max-w-screen-sm">
+        <h3 className="text-xl sm:text-5xl md:text-6xl lg:text-4xl font-semibold leading-4 text-gray-600 font-mono">
+          <span className="text-lime-500 text-xl sm:text-9xl font-bold animate-pulse pt-2 pr-3">.</span>
+          AVAILABLE FOR WORK
+        </h3>
       </div>
 
-      
-      <div className="relative z-10 flex flex-col items-center justify-center w-full h-full">
-        <h2 className="text-4xl font-semibold text-black mb-4">Hi, I am <span className="font-normal text-teal-500">
-        Aaqib
-          </span> </h2>
-
-   
-
-        <div className="relative w-72 h-72  shadow-2xl bending-image z-10">
-          <img
-        src={Aaqib}
-        alt="Aaqib"
-        className="w-full h-full object-cover rounded-3xl bending-image"
-          />
-         </div>
-       
-      
-
-
-        {/* Circular Layout for Side Images */}
-        <div className="absolute flex justify-between w-screen h-screen overflow-y-auto">
-  {/* First set of images */}
-  <div className="relative flex flex-col items-center justify-center w-1/2">
-    <div className="flex flex-col items-center -space-y-16"> {/* Overlapping images */}
-      <img src={BlueTool} alt="Blue Tool" className="w-72 h-72 ml-24 mt-20 z-10 animate-bounce1 " />
-      <img src={OrangBall} alt="Orange Ball" className="w-72 h-72 z-20 animate-bounce2" />
-      <img src={GreenCube} alt="Green Cube" className="w-72 h-72 ml-24 z-30 animate-bounce3" />
-    </div>
-  </div>
-  {/* Second set of images */}
-  <div className="relative flex flex-col items-center justify-center w-1/2 ">
-    <div className="flex flex-col items-center -space-y-16"> {/* Overlapping images */}
-      <img src={PowderBlueStar} alt="Blue Star" className="w-72 h-72 mr-24 animate-bounce4" />
-      <img src={PowderBlueCube} alt="Blue Cube" className="w-72 h-72 z-20 animate-bounce5 " />
-      <img src={GreenTool} alt="Green Tool" className="w-72 h-72 mr-24 z-30 animate-bounce6" />
-    </div>
-  </div>
-</div>
-
-
-
-
+      {/* Name Section */}
+      <div className="flex flex-col max-w-screen-sm">
+        <h1 className="text-white text-4xl sm:text-7xl md:text-8xl lg:text-8xl font-extrabold">AAQIB</h1>
+        <h1 className="text-white text-3xl sm:text-5xl md:text-8xl lg:text-8xl font-extrabold">BASHIR MIR</h1>
       </div>
-    </section>
+    </div>
   );
 };
 
