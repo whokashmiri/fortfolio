@@ -47,32 +47,18 @@ const Hero = () => {
       </div>
     </div>
 
-    <div className="h-screen flex bg-red-500 flex-row md:flex-row w-full">
-      {/* First Half */}
-      <div className="h-1/2 md:h-full md:w-4/5 bg-blue-500 flex flex-col justify-center items-center p-6 text-white">
-        <h1 className="text-2xl md:text-4xl lg:text-8xl font-bold mb-4 text-start">THE FUTURE IS DIGITAL, <br className="text-start" /> AND I DESIGN IT.</h1>
-        <button className="relative bg-lime-500 h-8 text-black font-bold overflow-hidden transition duration-300 clip-path-polygon2 group">
-  <span className="absolute inset-0 bg-white transition-all duration-1000 group-hover:translate-y-[-100%]"></span>
-  <span className="relative z-10 uppercase">VIEW ABOUT  ABM 1*</span>
+    <div className="flex  min-h-screen ">
+      <div className="w-full  p-6  shadow-lg rounded-lg text-start">
+        <h1 className="text-6xl font-bold mb-4">THE FUTURE IS DIGITAL, <br /> AND I DESIGN IT.</h1>
+        <button className="relative bg-lime-500 w-16 h-8 text-black font-bold overflow-hidden transition duration-300 clip-path-polygon group">
+  <span className="absolute inset-0 bg-white transition-all duration-1000 group-hover:translate-x-[100%]"></span>
+  <span className="relative z-10">VIEW ABOUT ABM 1</span>
 </button>
-      
-      
-      </div>  
+        <h2 className="text-xl font-semibold mt-4">ABOUT</h2>
+        <p className="text-gray-600 mt-2">I blend the power of no-code innovation with development expertise to bring my creative visions to life. My approach is unconventional, but my dedication to the craft is unparalleled. I don’t just build—I engineer experiences, crafting seamless solutions that bridge technology and design.
 
-
-      <div className="h-1/2 md:h-full md:w-4/5 bg-blue-500 flex flex-col justify-center items-center p-6 text-white">
-        <h1 className="text-2xl md:text-4xl lg:text-8xl font-bold mb-4 text-start">THE FUTURE IS DIGITAL, <br className="text-start" /> AND I DESIGN IT.</h1>
-        <button className="relative bg-lime-500 h-8 text-black font-bold overflow-hidden transition duration-300 clip-path-polygon2 group">
-  <span className="absolute inset-0 bg-white transition-all duration-1000 group-hover:translate-y-[-100%]"></span>
-  <span className="relative z-10 uppercase">VIEW ABOUT  ABM 1*</span>
-</button>
-      
-      
-      </div>  
-
-      
-      
-     
+I thrive on finding unexpected solutions—turning obstacles into opportunities with the right perspective. Whether it’s automation, AI-driven tools, or full-scale applications, I code the future while designing beyond limits..</p>
+      </div>
     </div>
     </div>
   );
