@@ -9,9 +9,9 @@ export default function Quote() {
           <img 
             src={side} 
             alt="Cyberpunk Left" 
-            className="w-full h-auto object-cover transform transition duration-500 group-hover:scale-110 group-hover:rotate-2"
+            className="w-full h-auto object-cover transform rounded-3xl transition duration-500 group-hover:scale-110 group-hover:rotate-2"
           />
-          <div className="absolute inset-0 bg-pink-500 opacity-20 mix-blend-hard-light transition duration-500 group-hover:opacity-40"></div>
+          <div className="absolute inset-0 bg-pink-500 rounded-3xl opacity-20 mix-blend-hard-light transition duration-500 group-hover:opacity-40"></div>
         </div>
   
         {/* Quote in the Middle */}
@@ -29,7 +29,7 @@ export default function Quote() {
           <img 
             src={full}
             alt="Cyberpunk Right" 
-            className="w-full h-auto object-cover transform transition duration-500 group-hover:scale-110 group-hover:-rotate-2"
+            className="w-full h-auto object-cover transform rounded-3xl transition duration-500 group-hover:scale-110 group-hover:-rotate-2"
           />
           <div className="absolute inset-0 bg-blue-500 opacity-20 mix-blend-hard-light transition duration-500 group-hover:opacity-40"></div>
         </div>

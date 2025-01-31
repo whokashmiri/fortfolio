@@ -1,4 +1,12 @@
+import {useEffect} from "react";
+import AOS from 'aos';
+import "aos/dist/aos.css"; 
+
+
 const Hero = () => {
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+  }, [])
   return (
 
     <div className="flex flex-col items-center justify-center h-[90vh] text-center px-4">
@@ -12,8 +20,8 @@ const Hero = () => {
 
       {/* Name Section */}
       <div className="flex flex-col max-w-screen-sm mb-12">
-        <h1 className="text-white text-4xl sm:text-7xl md:text-8xl lg:text-8xl font-extrabold">AAQIB</h1>
-        <h1 className="text-white text-3xl sm:text-5xl md:text-8xl lg:text-8xl font-extrabold">BASHIR MIR</h1>
+        <h1 className="text-white text-4xl sm:text-7xl md:text-8xl lg:text-8xl font-extrabold" data-aos="fade-right">AAQIB</h1>
+        <h1 className="text-white text-3xl sm:text-5xl md:text-8xl lg:text-8xl font-extrabold" data-aos="fade-left">BASHIR MIR</h1>
       </div>
      
 
@@ -37,6 +45,34 @@ const Hero = () => {
 
 
       </div>
+    </div>
+
+    <div className="h-screen flex bg-red-500 flex-row md:flex-row w-full">
+      {/* First Half */}
+      <div className="h-1/2 md:h-full md:w-4/5 bg-blue-500 flex flex-col justify-center items-center p-6 text-white">
+        <h1 className="text-2xl md:text-4xl lg:text-8xl font-bold mb-4 text-start">THE FUTURE IS DIGITAL, <br className="text-start" /> AND I DESIGN IT.</h1>
+        <button className="relative bg-lime-500 h-8 text-black font-bold overflow-hidden transition duration-300 clip-path-polygon2 group">
+  <span className="absolute inset-0 bg-white transition-all duration-1000 group-hover:translate-y-[-100%]"></span>
+  <span className="relative z-10 uppercase">VIEW ABOUT  ABM 1*</span>
+</button>
+      
+      
+      </div>  
+
+
+      <div className="h-1/2 md:h-full md:w-4/5 bg-blue-500 flex flex-col justify-center items-center p-6 text-white">
+        <h1 className="text-2xl md:text-4xl lg:text-8xl font-bold mb-4 text-start">THE FUTURE IS DIGITAL, <br className="text-start" /> AND I DESIGN IT.</h1>
+        <button className="relative bg-lime-500 h-8 text-black font-bold overflow-hidden transition duration-300 clip-path-polygon2 group">
+  <span className="absolute inset-0 bg-white transition-all duration-1000 group-hover:translate-y-[-100%]"></span>
+  <span className="relative z-10 uppercase">VIEW ABOUT  ABM 1*</span>
+</button>
+      
+      
+      </div>  
+
+      
+      
+     
     </div>
     </div>
   );
