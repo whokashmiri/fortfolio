@@ -27,7 +27,12 @@ export default function Navbar() {
       {/* Right Section */}
       <div className="flex items-center gap-4">
         <Search className="w-5 h-5 cursor-pointer" />
-        <button >MENU</button>
+        <button className="relative bg-lime-500 w-16 h-8 text-black font-bold overflow-hidden transition duration-300 clip-path-polygon group">
+  <span className="absolute inset-0 bg-white transition-all duration-1000 group-hover:translate-x-[100%]"></span>
+  <span className="relative z-10">MENU</span>
+</button>
+
+
       </div>
     </div>
   );
