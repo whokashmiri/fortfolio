@@ -9,7 +9,7 @@ export default {
 
       animation: {
         glitchTextBreak: "glitchTextBreak 0.9s infinite",
-
+        glitch: "glitch 0.2s infinite",
       },
       
 
@@ -22,8 +22,16 @@ export default {
           "80%": { transform: "translate(3px, 3px) skewX(5deg)", opacity: "1", textShadow: "0 0 5px #0ff, 0 0 10px #f0f" },
           "100%": { transform: "translate(0)", opacity: "1", textShadow: "0 0 5px #0ff, 0 0 10px #f0f" },
         },
-      },
+        glitch: {
+            "0%": { transform: "translate(0)" },
+           "20%":{ transform: "translate(-2px, 2px)" },
+            "40%":{ transform: "translate(2px, -2px)" },
+             "60%": { transform: "translate(-2px, -2px)"},
+           " 80%": {  transform: "translate(2px, 2px)" },
+           " 100%": { transform: "translate(0)" },
 
+      },
+    },
       fontFamily: {
         roboto: ['Roboto', 'sans-serif'],
       },

@@ -1,5 +1,6 @@
 import Hero from "./components/Hero"
 import Navbar from "./components/Navbar"
+import ProjectImages from "./components/ProjectImages"
 import Projects from "./components/Projects"
 // import Quote from "./components/Quote"
 
@@ -12,6 +13,7 @@ const App = () => {
         <Hero/>
         {/* <Quote/> */}
         <Projects/>
+        <ProjectImages/>
       
     
     </div>
