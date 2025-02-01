@@ -1,4 +1,4 @@
-import {useEffect} from "react";
+import {useEffect, useState} from "react";
 import AOS from 'aos';
 import "aos/dist/aos.css"; 
 
@@ -7,13 +7,22 @@ const Hero = () => {
   useEffect(() => {
     AOS.init({ duration: 1000 });
   }, [])
+
+  const [isAnimating, setIsAnimating] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsAnimating(false); // Stop animation after 3 seconds
+    }, 3000);
+    return () => clearTimeout(timer);
+  }, []);
   return (
 <>
     <div className="flex flex-col items-center justify-center h-[90vh] text-center px-4">
       {/* Availability Section */}
-      <div className="flex items-start gap-1 py-2  rounded-lg max-w-screen-sm">
+      <div className="flex items-start gap-1 py-1  rounded-lg max-w-screen-sm">
         <h3 className="text-xl sm:text-5xl md:text-6xl lg:text-2xl font-semibold leading-4 text-gray-600 font-mono">
-          <span className="text-lime-500 text-xl sm:text-9xl font-bold animate-pulse pt-2 pr-3">.</span>
+          <span className="text-lime-500 text-xl sm:text-8xl font-bold animate-pulse pt-2 pr-3">.</span>
           AVAILABLE FOR WORK
         </h3>
       </div>
@@ -56,7 +65,23 @@ const Hero = () => {
 
     <div className="flex  min-h-screen ">
       <div className="w-full  p-6  shadow-lg rounded-lg text-start">
-        <h1 className="text-6xl font-bold mt-10">THE FUTURE IS DIGITAL, <br /> AND I DESIGN IT.</h1>  {/* add glitchy effect on this */}
+      <h1 className="relative text-8xl font-bold mt-7  tracking-wide">
+      {/* Glitch Layers */}
+      {isAnimating && (
+        <>
+          <span className="absolute top-0 left-0 w-full h-full text-lime-700 blur-sm opacity-70 -translate-x-1 animate-glitchTextBreak">
+            THE FUTURE IS DIGITAL, <br /> AND I DESIGN IT.
+          </span>
+          <span className="absolute top-0 left-0 w-full h-full text-lime-600 blur-sm opacity-70 translate-x-1 animate-glitchTextBreak">
+            THE FUTURE IS DIGITAL, <br /> AND I DESIGN IT.
+          </span>
+        </>
+      )}
+      {/* Main Text */}
+      <span className={isAnimating ? "animate-glitchTextBreak" : ""}>
+        THE FUTURE IS DIGITAL, <br /> AND I DESIGN IT.
+      </span>
+    </h1>
         <button className="relative bg-lime-500 w-48 h-12 mt-10 text-black font-bold overflow-hidden transition duration-300 clip-path-polygon2 group">
       <span className="absolute inset-0 bg-white transition-all duration-1000 group-hover:translate-x-[100%]"></span>
        <span className="relative mt-16 z-10">VIEW ABOUT ABM 1*</span>
@@ -73,4 +98,9 @@ const Hero = () => {
   );
 };
 
+
+
+
 export default Hero;
+
+
