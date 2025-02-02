@@ -1,7 +1,10 @@
 
+import { useState } from 'react';
 import Navbar from './Navbar'
 
 const Contact = () => {
+  const [text, setText] = useState("@WHOKASHMIRI");
+
     return (
         <>
         <Navbar/>
@@ -48,13 +51,16 @@ const Contact = () => {
         <h2 className="text-xl font-bold ">FOLLOW ME</h2>
         <ul className="mt-2 space-y-2 text-slate-400 font-medium uppercase">
           <li>
-            <a href="#" className="hover:underline">Instagram</a>
+            <a href="https://www.instagram.com/whokashmiri/" className="hover:underline">Instagram</a>
           </li>
           <li>
-            <a href="#" className="hover:underline">GITHUB</a>
+            <a href="https://github.com/whokashmiri" className="hover:underline">GITHUB</a>
           </li>
           <li>
-            <a href="#" className="hover:underline">Twitter X</a>
+            <a href="https://x.com/WhoKashmiri" className="hover:underline">Twitter X</a>
+          </li>
+          <li>
+            <a href="https://hashnode.com/@whokashmiri" className="hover:underline">HASHNODE</a>
           </li>
         </ul>
       </div>
@@ -92,6 +98,20 @@ const Contact = () => {
         </p>
       </div>
     </div>
+
+    <div className="flex flex-col max-w-screen-sm mb-12">
+    <h1
+       className="relative text-white text-4xl sm:text-7xl md:text-8xl lg:text-[150px] font-extrabold 
+       before:absolute before:left-0 before:bottom-0 before:h-1 before:w-0 before:bg-white 
+       before:transition-all before:duration-500 hover:before:w-[187%]"
+data-aos="fade-up"
+      onMouseEnter={() => setText("@WHOK4SHMIR1")}
+      onMouseLeave={() => setText("@WHOKASHMIRI")}
+    >
+      {text}
+    </h1>
+        
+      </div>
       </div>
       </>
     );

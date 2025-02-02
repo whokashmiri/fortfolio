@@ -1,30 +1,27 @@
 import { useState } from "react";
-import one from "../assets/one.jpg";
-import two from "../assets/two.jpg";
-import three from "../assets/three.jpg";
-import four from "../assets/four.jpg";
+
 
 const images = [
   { 
-    src: one, 
+    src:"https://images.pexels.com/photos/8107819/pexels-photo-8107819.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2", 
     link: "https://exaltsystem.com/", 
     title: "Exalt System", 
     description: " Modern React app with Tailwind CSS, DaisyUI, Zustand, React Router, and AOS. Features:  Sleek UI with DaisyUI + Tailwind  Global state with Zustand  Seamless navigation with React Router  Smooth scroll animations using AOS. A fully responsive and engaging experience!."
   },
   { 
-    src: two, 
+    src: "https://images.pexels.com/photos/8107978/pexels-photo-8107978.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2", 
     link: "https://github.com/whokashmiri/chat-me", 
     title: "MERN CHAT APP", 
     description: "ChatMe is a modern real-time chat application that enables seamless communication between users. Built with React, Express, Socket.io, and MongoDB, it offers instant messaging with a smooth and responsive UI."
   },
   { 
-    src: three, 
+    src: "https://images.pexels.com/photos/21840663/pexels-photo-21840663/free-photo-of-a-robot-in-a-city.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2", 
     link: "https://github.com/whokashmiri/Nutrify", 
     title: "Nutrify", 
     description: "Nutrify is a powerful and intuitive nutrition tracking app that helps you monitor your daily food intake, track calories, and maintain a healthy diet. Whether you want to lose weight, gain muscle, or simply eat healthier, Nutrify makes it easy to log your meals and track your progress over time."
   },
   { 
-    src: four, 
+    src: "https://images.pexels.com/photos/7688587/pexels-photo-7688587.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2", 
     link: "https://github.com/excelr-projs", 
     title: "PaiseBhej", 
     description: "PaiseBhej is a fast, secure, and seamless digital wallet-to-wallet payment system that allows users to send and receive money effortlessly. Built with Spring Boot, React, and MySQL, it provides a reliable solution for hassle-free transactions with real-time notifications."
@@ -53,7 +50,7 @@ const ProjectImages = () => {
             <img
               src={img.src}
               alt={img.title}
-              className="w-full h-full object-cover rounded-xl transition-transform duration-300 group-hover:scale-110"
+              className="w-full h-full object-cover rounded-xl transition-transform duration-300 group-hover:scale-110 opacity-50"
             />
             <div className="absolute inset-0 bg-black bg-opacity-20 flex flex-col text-start justify-end text-white p-4 z-10">
               <h1 className="text-6xl font-bold uppercase">{img.title}</h1>
