@@ -1,6 +1,8 @@
 
 import { useState } from 'react';
 import Navbar from './Navbar'
+import { ArrowUpRight } from 'lucide-react';
+
 
 const Contact = () => {
   const [text, setText] = useState("@WHOKASHMIRI");
@@ -51,17 +53,78 @@ const Contact = () => {
         <h2 className="text-xl font-bold ">FOLLOW ME</h2>
         <ul className="mt-2 space-y-2 text-slate-400 font-medium uppercase">
           <li>
-            <a href="https://www.instagram.com/whokashmiri/" className="hover:underline">Instagram</a>
+   
+
+
+          <li className="relative group">
+  <a
+   href="https://github.com/whokashmiri" 
+    className="relative inline-flex items-center text-white px-2 py-0 transition-all duration-300 ease-in-out"
+  >
+    GITHUB
+    {/* Arrow appears on hover */}
+    <span className="opacity-0 translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300">
+    <ArrowUpRight className='bg-lime-500 text-black rounded-full shadow-2xl ml-2' />
+    </span>
+    {/* Underline effect */}
+    <span className="absolute left-0 bottom-0 w-0 h-[1px] bg-white transition-all duration-500 group-hover:w-[70px]"></span>
+  </a>
+</li>
           </li>
-          <li>
-            <a href="https://github.com/whokashmiri" className="hover:underline">GITHUB</a>
-          </li>
-          <li>
-            <a href="https://x.com/WhoKashmiri" className="hover:underline">Twitter X</a>
-          </li>
-          <li>
-            <a href="https://hashnode.com/@whokashmiri" className="hover:underline">HASHNODE</a>
-          </li>
+          
+
+
+          <li className="relative group">
+  <a
+    href="https://x.com/WhoKashmiri"
+    className="relative inline-flex items-center text-white px-2 py-0 transition-all duration-300 ease-in-out"
+  >
+    Twitter X
+    {/* Arrow appears on hover */}
+    <span className="opacity-0 translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300">
+    <ArrowUpRight className='bg-lime-500 text-black rounded-full shadow-2xl ml-2' />
+    </span>
+    {/* Underline effect */}
+    <span className="absolute left-0 bottom-0 w-0 h-[1px] bg-white transition-all duration-500 group-hover:w-[95px]"></span>
+  </a>
+</li>
+
+
+<li className="relative group">
+  <a
+  href="https://www.instagram.com/whokashmiri/" 
+    className="relative inline-flex items-center text-white px-2 py-0 transition-all duration-300 ease-in-out"
+  >
+    Instagram
+    {/* Arrow appears on hover */}
+    <span className="opacity-0 translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300">
+    <ArrowUpRight className='bg-lime-500 text-black rounded-full shadow-2xl ml-2' />
+
+    </span>
+    {/* Underline effect */}
+    <span className="absolute left-0 bottom-0 w-0 h-[1px] bg-white transition-all duration-500 group-hover:w-[100px]"></span>
+  </a>
+</li>
+
+
+
+
+
+
+          <li className="relative group">
+  <a
+   href="https://hashnode.com/@whokashmiri" 
+    className="relative inline-flex items-center text-white px-2 py-0 transition-all duration-300 ease-in-out"
+  >
+    HASHNODE
+    {/* Arrow appears on hover */}
+    <span className="opacity-0 translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300">
+    <ArrowUpRight className='bg-lime-500 text-black rounded-full shadow-2xl ml-2' />
+    </span>
+    {/* Underline effect */}
+    <span className="absolute left-0 bottom-0 w-0 h-[1px] bg-white transition-all duration-500 group-hover:w-[95px]"></span>
+  </a>
+</li>
         </ul>
       </div>
 
@@ -104,7 +167,7 @@ const Contact = () => {
        className="relative text-white text-4xl sm:text-7xl md:text-8xl lg:text-[150px] font-extrabold 
        before:absolute before:left-0 before:bottom-0 before:h-1 before:w-0 before:bg-white 
        before:transition-all before:duration-500 hover:before:w-[187%]"
-data-aos="fade-up"
+data-aos="fade-right"
       onMouseEnter={() => setText("@WHOK4SHMIR1")}
       onMouseLeave={() => setText("@WHOKASHMIRI")}
     >
