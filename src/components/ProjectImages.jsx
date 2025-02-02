@@ -1,30 +1,73 @@
-import one from "../assets/one.jpg"
-import two from "../assets/two.jpg"
-import three from "../assets/three.jpg"
-import four from "../assets/four.jpg"
-
-
-
+import { useState } from "react";
+import one from "../assets/one.jpg";
+import two from "../assets/two.jpg";
+import three from "../assets/three.jpg";
+import four from "../assets/four.jpg";
 
 const images = [
-  { src: one, link: "https://example.com/1" },
-  { src: two, link: "https://example.com/2" },
-  { src: three, link: "https://example.com/3" },
-  { src: four, link: "https://example.com/4" },
+  { 
+    src: one, 
+    link: "https://exaltsystem.com/", 
+    title: "Exalt System", 
+    description: " Modern React app with Tailwind CSS, DaisyUI, Zustand, React Router, and AOS. Features:  Sleek UI with DaisyUI + Tailwind  Global state with Zustand  Seamless navigation with React Router  Smooth scroll animations using AOS. A fully responsive and engaging experience!."
+  },
+  { 
+    src: two, 
+    link: "https://github.com/whokashmiri/chat-me", 
+    title: "MERN CHAT APP", 
+    description: "ChatMe is a modern real-time chat application that enables seamless communication between users. Built with React, Express, Socket.io, and MongoDB, it offers instant messaging with a smooth and responsive UI."
+  },
+  { 
+    src: three, 
+    link: "https://github.com/whokashmiri/Nutrify", 
+    title: "Nutrify", 
+    description: "Nutrify is a powerful and intuitive nutrition tracking app that helps you monitor your daily food intake, track calories, and maintain a healthy diet. Whether you want to lose weight, gain muscle, or simply eat healthier, Nutrify makes it easy to log your meals and track your progress over time."
+  },
+  { 
+    src: four, 
+    link: "https://github.com/excelr-projs", 
+    title: "PaiseBhej", 
+    description: "PaiseBhej is a fast, secure, and seamless digital wallet-to-wallet payment system that allows users to send and receive money effortlessly. Built with Spring Boot, React, and MySQL, it provides a reliable solution for hassle-free transactions with real-time notifications."
+  },
 ];
 
 const ProjectImages = () => {
+  const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
+  const [hoveredIndex, setHoveredIndex] = useState(null);
+  
+  const handleMouseMove = (e, index) => {
+    setCursorPosition({ x: e.nativeEvent.offsetX, y: e.nativeEvent.offsetY });
+    setHoveredIndex(index);
+  };
+
   return (
-    <div className="grid grid-cols-2 gap-4 p-4">
+    <div className="grid grid-cols-2 gap-8 p-8 ">
       {images.map((img, index) => (
         <a key={index} href={img.link} target="_blank" rel="noopener noreferrer">
-          <div className="relative group overflow-hidden rounded-xl">
+          <div 
+            className="relative group overflow-hidden rounded-xl" 
+            onMouseMove={(e) => handleMouseMove(e, index)}
+            onMouseEnter={() => setHoveredIndex(index)}
+            onMouseLeave={() => setHoveredIndex(null)}
+          >
             <img
               src={img.src}
-              alt={`Image ${index + 1}`}
+              alt={img.title}
               className="w-full h-full object-cover rounded-xl transition-transform duration-300 group-hover:scale-110"
             />
-            <div className="absolute inset-0 bg-white opacity-10 mix-blend-color-dodge group-hover:animate-glitch"></div>
+            <div className="absolute inset-0 bg-black bg-opacity-20 flex flex-col text-start justify-end text-white p-4 z-10">
+              <h1 className="text-6xl font-bold uppercase">{img.title}</h1>
+              <p className="text-sm opacity-75">{img.description}</p>
+            </div>
+            <div className="absolute inset-0 bg-white opacity-5 mix-blend-color-dodge group-hover:animate-glitch"></div>
+            {hoveredIndex === index && (
+              <div
+                className="absolute bg-black text-white text-xl font-bold px-5 py-3 rounded-full shadow-lg pointer-events-none"
+                style={{ top: `${cursorPosition.y}px`, left: `${cursorPosition.x}px` }}
+              >
+                CLICK
+              </div>
+            )}
           </div>
         </a>
       ))}
@@ -33,9 +76,3 @@ const ProjectImages = () => {
 };
 
 export default ProjectImages;
-
-// Tailwind CSS classes used: grid, gap, rounded-xl, transition, group-hover, and custom glitch effect
-// Add this animation to your Tailwind config or global CSS:
-// @keyframes 
-// }
-// .animate-glitch { animation: glitch 0.2s infinite; }
