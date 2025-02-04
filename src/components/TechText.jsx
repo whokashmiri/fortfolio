@@ -28,29 +28,47 @@ export default function TechText() {
       </div>
 
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 p-8">
-      {cards.map((card) => (
-        <div
-          key={card.id}
-          className="relative h-48 bg-cover bg-center text-white text-lg font-semibold flex flex-col items-center justify-center gap-3 transition-transform duration-300 ease-out transform hover:scale-105 hover:-translate-y-2 shadow-lg hover:shadow-2xl"
-          style={{
-            backgroundImage: `url(${card.bg})`,
-            clipPath: "polygon(10% 0%, 90% 0%, 100% 10%, 100% 90%, 90% 100%, 10% 100%, 0% 90%, 0% 10%)",
-            perspective: "1000px",
-          }}
-        >
-          {/* Glassmorphism Overlay */}
-          <div className="absolute inset-0 bg-black/40 backdrop-blur-sm rounded-lg hover:bg-black/20 transition-all duration-300"></div>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 p-12">
+  {cards.map((card) => (
+    <div
+      key={card.id}
+      className="relative h-56 text-white text-2xl font-extrabold flex flex-col items-center justify-center gap-3 transition-transform duration-300 ease-out transform hover:scale-105 hover:-translate-y-2 shadow-lg hover:shadow-2xl overflow-hidden"
+      style={{
+        clipPath:
+          "polygon(56% 20%, 68% 0, 100% 0, 100% 100%, 70% 100%, 30% 100%, 0 100%, 0 20%)",
+        willChange: "transform",
+        backfaceVisibility: "hidden",
+      }}
+    >
+      {/* Background Image (With Clipping) */}
+      <div
+        className="absolute inset-0 bg-cover bg-center transition-opacity duration-300"
+        style={{
+          backgroundImage: `url(${card.bg})`,
+          clipPath:
+            "polygon(56% 20%, 68% 0, 100% 0, 100% 100%, 70% 100%, 30% 100%, 0 100%, 0 20%)",
+        }}
+      ></div>
 
-          {/* Icon and Title */}
-          <span className="relative z-10">{card.icon}</span>
-          <span className="relative z-10 text-xl font-bold">{card.title}</span>
+      {/* Glassmorphism Overlay */}
+      <div className="absolute inset-0 bg-black/40 backdrop-blur-sm hover:bg-black/10 transition-all duration-300" 
+        style={{
+          clipPath:
+            "polygon(56% 20%, 68% 0, 100% 0, 100% 100%, 70% 100%, 30% 100%, 0 100%, 0 20%)",
+        }}
+      ></div>
 
-          {/* 3D Effect on Hover */}
-          <div className="absolute inset-0 transform transition-transform duration-500 hover:rotate-x-6 hover:rotate-y-6"></div>
-        </div>
-      ))}
+      {/* Content */}
+      <div className="relative z-10 flex flex-col items-center justify-center gap-2">
+        <span>{card.icon}</span>
+        <span className="text-xl font-bold">{card.title}</span>
+      </div>
     </div>
+  ))}
+</div>
+
+
+
 
       </>
     );
