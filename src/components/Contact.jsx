@@ -52,7 +52,7 @@ const Contact = () => {
       <div>
         <h2 className="text-xl font-bold ">FOLLOW ME</h2>
         <ul className="mt-2 space-y-2 text-slate-400 font-medium uppercase">
-          <li>
+          
    
 
 
@@ -70,7 +70,6 @@ const Contact = () => {
     <span className="absolute left-0 bottom-0 w-0 h-[1px] bg-white transition-all duration-500 group-hover:w-[70px]"></span>
   </a>
 </li>
-          </li>
           
 
 

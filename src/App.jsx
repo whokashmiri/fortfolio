@@ -3,6 +3,7 @@ import Hero from "./components/Hero"
 import Navbar from "./components/Navbar"
 import ProjectImages from "./components/ProjectImages"
 import Projects from "./components/Projects"
+import TechText from "./components/TechText"
 // import Quote from "./components/Quote"
 
 
@@ -15,6 +16,7 @@ const App = () => {
         {/* <Quote/> */}
         <Projects/>
         <ProjectImages/>
+        <TechText/>
         <Contact/>
       
     
