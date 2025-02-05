@@ -131,7 +131,7 @@ const Contact = () => {
       <div>
         <h2 className="text-xl font-bold t">CURRENT LOCATION</h2>
         <p className="mt-2 text-slate-400">
-          Mirpora St. Kehnusa, <br />
+         Kehnusa Bandipora, <br />
           Kashmir (KMR), 193502 <br />
          Jammu and Kashmir
         </p>

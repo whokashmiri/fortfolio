@@ -34,7 +34,7 @@ const Hero = () => {
       </div>
      
 
-      <div className="w-full border-b-2 p-4 flex justify-between items-center">
+      <div className="w-full  p-4 flex justify-between items-center">
       {/* Left Section */}
       <div className="flex items-center gap-4">
         
