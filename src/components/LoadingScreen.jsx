@@ -28,8 +28,8 @@ const LoadingScreen = ({ onFinish }) => {
   }, [onFinish]);
 
   return (
-    <div className="fixed inset-0 flex flex-col items-center justify-center bg-black text-neonPink text-2xl">
-      <h1 className="font-extrabold text-4xl mb-4">Welcome to Aaqib&apos;s World</h1>
+    <div className="fixed inset-0 flex flex-col items-center justify-center bg-black  text-2xl">
+      <h1 className="font-extrabold text-4xl mb-4 text-white">Welcome to Aaqib&apos;s World</h1>
       <p>{loadingText}</p>
     </div>
   );

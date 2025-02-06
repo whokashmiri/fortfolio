@@ -1,106 +1,53 @@
-import {useEffect, useState} from "react";
-import AOS from 'aos';
-import "aos/dist/aos.css"; 
+import { motion } from "framer-motion";
+import heroImage from "../assets/bg-hero.png"; // Replace with your image path
 
-
-const Hero = () => {
-  useEffect(() => {
-    AOS.init({ duration: 1000 });
-  }, [])
-
-  const [isAnimating, setIsAnimating] = useState(true);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsAnimating(false); // Stop animation after 3 seconds
-    }, 3000);
-    return () => clearTimeout(timer);
-  }, []);
+export default function Hero() {
   return (
-<>
-    <div className="flex flex-col items-center justify-center h-[90vh] text-center px-4">
-      {/* Availability Section */}
-      <div className="flex items-start gap-1 py-1  rounded-lg max-w-screen-sm">
-        <h3 className="text-xl sm:text-5xl md:text-6xl lg:text-2xl font-semibold leading-4 text-gray-600 font-mono">
-          <span className="text-lime-500 text-xl sm:text-8xl font-bold animate-pulse pt-2 pr-3">.</span>
-          AVAILABLE FOR WORK
-        </h3>
+    <section className="flex flex-col md:flex-row items-center justify-center h-screen px-6 md:px-16  bg-gray-200 dark:bg-gray-950 ">
+      {/* Left Section (Text) */}
+      <div className="flex lg:flex-row items-center justify-center  h-1/2 w-[65%] rounded-3xl bg-gray-200 shadow-2xl dark:bg-gray-900 ">
+      <div className="w-full md:w-3/5 space-y-6 " >
+        {/* Animated Ping Effect */}
+        <motion.p
+          className="text-black font-semibold relative w-fit bg-green-400 mr-4 rounded-xl text-xl m-4"
+          
+        >
+         <span className="animate-ping"
+         
+         > ● </span> 2 projects left in February
+        </motion.p>
+
+        {/* Hero Text */}
+        <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white indent-4">
+          Hi, I&apos;m Aaqib Mir
+        </h1>
+        <p className="text-lg text-gray-600 dark:text-gray-300 pl-4">
+          A web designer and Full Stack Developer from Bandipora, Kashmir, crafts beautiful 
+          and user-friendly websites tailored to your needs.
+        </p>
+
+        {/* Buttons */}
+        <div className="flex space-x-4 p-4">
+          <button className="px-6 py-3 bg-black text-white dark:text-black font-semibold rounded-3xl hover:bg-gray-800 transition dark:bg-white">
+            Book a Call
+          </button>
+          <button className="px-6 py-3 border border-gray-700 dark:border-white rounded-3xl text-gray-900 dark:text-white font-semibold hover:bg-slate-300 dark:hover:bg-gray-800 transition">
+            About Me
+          </button>
+        </div>
       </div>
 
-      {/* Name Section */}
-      <div className="flex flex-col max-w-screen-sm mb-12">
-        <h1 className="text-white text-4xl sm:text-7xl md:text-8xl lg:text-8xl font-extrabold" data-aos="fade-right">AAQIB</h1>
-        <h1 className="text-white text-3xl sm:text-5xl md:text-8xl lg:text-8xl font-extrabold" data-aos="fade-left">BASHIR MIR</h1>
-      </div>
-     
-
-      <div className="w-full  p-4 flex justify-between items-center">
-      {/* Left Section */}
-      <div className="flex items-center gap-4">
-        
-        <span className="text-lg  font-semibold ">BASED IN KMR, BANDIPORA</span>
-        
-       
+      {/* Right Section (Image) */}
+      <div className="w-full md:w-2/5 flex justify-center overflow-hidden pb-[113px] md:mt-0">
+        <img
+          src={heroImage}
+          alt="Aaqib Mir"
+          className="rounded-lg  object-contain w-full max-w-sm"
+        />
       </div>
 
-      {/* Right Section */}
-      <div className="flex items-center gap-4">
-      <span className="text-lg  font-semibold "># ; # CODER</span>
-
-        <button className="relative bg-lime-500 h-8 text-black font-bold overflow-hidden transition duration-300 clip-path-polygon2 group">
-  <span className="absolute inset-0 bg-white transition-all duration-1000 group-hover:translate-y-[-100%]"></span>
-  <span className="relative z-10 uppercase">+  FULL STACK DEVELOPER</span>
-</button>
-
-
       </div>
-    </div>
-
-    
-    </div>
-
-
-
-    {/* DIGITAL */}
-
-    <div className="flex  min-h-screen ">
-      <div className="w-full  p-6  shadow-lg rounded-lg text-start">
-      <h1 className="relative text-8xl font-bold mt-7  tracking-wide">
-      {/* Glitch Layers */}
-      {isAnimating && (
-        <>
-          <span className="absolute top-0 left-0 w-full h-full text-lime-700 blur-sm opacity-70 -translate-x-1 animate-glitchTextBreak">
-            THE FUTURE IS DIGITAL, <br /> AND I DESIGN IT.
-          </span>
-          <span className="absolute top-0 left-0 w-full h-full text-lime-600 blur-sm opacity-70 translate-x-1 animate-glitchTextBreak">
-            THE FUTURE IS DIGITAL, <br /> AND I DESIGN IT.
-          </span>
-        </>
-      )}
-      {/* Main Text */}
-      <span className={isAnimating ? "animate-glitchTextBreak" : ""}>
-        THE FUTURE IS DIGITAL, <br /> AND I DESIGN IT.
-      </span>
-    </h1>
-        <button className="relative bg-lime-500 w-48 h-12 mt-10 text-black font-bold overflow-hidden transition duration-300 clip-path-polygon2 group">
-      <span className="absolute inset-0 bg-white transition-all duration-1000 group-hover:translate-x-[100%]"></span>
-       <span className="relative mt-16 z-10">VIEW ABOUT ABM 1*</span>
-      </button>
-        <h2 className="text-2xl font-extrabold mt-20">ABOUT ABM!</h2>
-        <p className="text-gray-300 text-2xl font-mono mt-8  w-3/4 uppercase [word-spacing:0.5rem] ">I merge no-code innovation with development expertise to engineer seamless, future-ready experiences. My unconventional approach transforms challenges into opportunities, crafting AI-driven tools, automation, and full-scale applications that bridge technology and design. With a relentless dedication to my craft, I don’t just build—I create solutions that redefine possibilities.</p>
-
-<h2 className="text-2xl font-extrabold mt-20">CHALLENGES AND APPROACH</h2>
-        <p className="text-gray-300 text-2xl font-mono mt-8  w-3/4 uppercase [word-spacing:0.5rem] ">I focused on user-centered design principles, ensuring each element served a purpose while enhancing the overall visual appeal. I employed responsive design techniques to maintain consistency across all devices and optimized performance to keep load times fast.</p>
-      </div>
-    </div>
-
-    </>
+      
+    </section>
   );
-};
-
-
-
-
-export default Hero;
-
-
+}
