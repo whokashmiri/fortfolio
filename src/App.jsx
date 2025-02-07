@@ -4,6 +4,7 @@ import LoadingScreen from "./components/LoadingScreen";
 import Hero from "./components/Hero";
 import  Projects  from "./components/Projects";
 import Clients from "./components/Clients";
+import Services from "./components/Services";
 
 
 
@@ -21,6 +22,7 @@ function App() {
           <Hero/>
           <Projects/>
           <Clients/>
+          <Services/>
         
         </>
       )}

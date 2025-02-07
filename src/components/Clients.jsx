@@ -31,25 +31,25 @@ const Clients = () => {
   }, []);
 
   return (
-    <div className="flex h-[40%] flex-col lg:flex-row items-center justify-center min-h-screen md:px-16  bg-accent dark:bg-primary gap-4">
+    <div className="flex h-[40%] flex-col lg:flex-row items-center justify-center md:px-16  bg-accent dark:bg-primary gap-4">
       <div
         ref={sectionRef}
-        className=" h-[40vh] w-[40vh] flex justify-between items-center p-6 bg-[#FEFEFE] dark:bg-secondary  border-2 rounded-2xl "
+        className=" h-[40vh] w-[40vh] flex justify-between items-center p-6 bg-[#FEFEFE] dark:bg-secondary rounded-2xl shadow-xl "
       >
         {/* First Box */}
-        <div className="w-[95%] h-[90%] p-6 dark:bg-[#1D1D1B] rounded-xl shadow-2xl text-center -rotate-6">
-          <h1 className="text-6xl font-extrabold text-red-600">{count}+ </h1>
+        <div className="w-[95%] h-[90%] p-6 dark:bg-[#181818] rounded-xl shadow-2xl text-center -rotate-12">
+          <h1 className="text-7xl font-extrabold text-orange-600">{count-11}+ </h1>
           <p className="text-gray-400">Satisfied Clients</p>
         </div>
-        </div>s
+        </div>
 
         {/* Second Box */}
         <div
         ref={sectionRef}
-         className=" h-[40vh] w-[40vh] flex justify-between items-center p-6 bg-[#FEFEFE] dark:bg-secondary  border-2 rounded-2xl "
+         className=" h-[40vh] w-[40vh] flex justify-between items-center p-6 bg-[#FEFEFE] dark:bg-secondary shadow-xl rounded-2xl "
       >
-        <div className="w-[95%] h-[90%] p-6 dark:bg-[#1D1D1B] rounded-xl shadow-2xl text-center ">
-          <h1 className="text-6xl font-extrabold text-yellow-500">{count}+</h1>
+        <div className="w-[95%] h-[90%] p-6 dark:bg-[#181818] rounded-xl shadow-2xl text-center ">
+          <h1 className="text-7xl font-extrabold text-yellow-500">{count-7}+</h1>
           <p className="text-gray-400">Projects Completed</p>
         </div>
         </div>
@@ -57,10 +57,10 @@ const Clients = () => {
         {/* Third Box */}
         <div
         ref={sectionRef}
-         className=" h-[40vh] w-[40vh] flex justify-between items-center p-6 bg-[#FEFEFE] dark:bg-secondary  border-2 rounded-2xl "
+         className=" h-[40vh] w-[40vh] flex justify-between items-center p-6 bg-[#FEFEFE] dark:bg-secondary  rounded-2xl shadow-xl  "
       >
-        <div className="w-[95%] h-[90%] p-6 dark:bg-[#1D1D1B] rounded-xl shadow-2xl text-center rotate-6">
-          <h1  className="text-6xl font-extrabold text-blue-500">{count}+</h1>
+        <div className="w-[95%] h-[90%] p-6 dark:bg-[#181818] rounded-xl shadow-2xl text-center rotate-12">
+          <h1  className="text-7xl font-extrabold text-blue-500">{count-18}+</h1>
           <p className="text-gray-400">Years of Experience</p>
         </div>
       </div>
