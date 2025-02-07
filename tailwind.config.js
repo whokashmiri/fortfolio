@@ -7,7 +7,19 @@ export default {
 	  "./src/**/*.{js,ts,jsx,tsx}",
 	],
 	theme: {
-	  extend: {},
+	  extend: {
+
+		colors: {
+			"primary": "#1A1A19",
+			"secondary": "#20201f",
+			"accent": "#f9f9f8",
+			"neutral": "#fefefe",
+			"customGrey" :"f0fee7",
+			"base-100" :"0e2d06",
+			
+			
+		  },
+	  },
 	},
 	plugins: [],
   }

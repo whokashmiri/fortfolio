@@ -20,8 +20,8 @@ export default function Navbar() {
   }, [darkMode]);
 
   return (
-    <nav className="fixed top-0 z-50 left-0 w-full bg-gray-200 dark:bg-gray-950 flex justify-center">
-      <div className="lg:max-w-[25%] mt-3 w-full flex flex-col p-4 bg-gray-200 dark:bg-gray-900 rounded-lg shadow-lg transition-all duration-300 relative">
+    <nav className="fixed top-0 z-50 left-0 w-full bg-accent dark:bg-primary flex justify-center">
+      <div className="lg:max-w-[20%] mt-3 w-full flex flex-col p-2 bg-neutral dark:bg-secondary rounded-lg shadow-lg transition-all duration-300 relative">
         
         {/* Top Section: Logo & Menu Buttons */}
         <div className="flex justify-between items-center w-full">
@@ -30,8 +30,8 @@ export default function Navbar() {
           <motion.button
             onClick={() => setIsOpen(!isOpen)}
             className="p-2   rounded-md  "
-            animate={{ rotate: isOpen ? 180 : 0 }} // Smooth rotation
-            transition={{ duration: 0.3 }}
+            animate={{ rotate: isOpen ? 90 : 0 }} // Smooth rotation
+            transition={{ duration: 0.4 }}
           >
             {isOpen ? (
               <X className="w-6 h-5 text-gray-900 dark:text-white" />
@@ -44,16 +44,18 @@ export default function Navbar() {
           <img
             src={logo}
             alt="Logo"
-            className="h-10 w-10 rounded-full object-cover object-top"
+            className="h-10 w-10 rounded-full object-cover object-top overflow-"
           />
 
           {/* Dark Mode Toggle */}
-          <button
+          <motion.button
             onClick={() => setDarkMode(!darkMode)}
             className="p-2 rounded-full   transition"
+            animate={{ rotate:  10  }} // Smooth rotation
+            transition={{ duration: 0.4 }}
           >
             {darkMode ? <Sun className="w-6 h-6 text-yellow-400" /> : <Moon className="w-5 h-5 text-gray-800" />}
-          </button>
+          </motion.button>
 
         </div>
 
@@ -62,13 +64,13 @@ export default function Navbar() {
           initial={{ height: 0, opacity: 0 }}
           animate={{ height: isOpen ? "auto" : 0, opacity: isOpen ? 1 : 0 }}
           transition={{ duration: 0.3 }}
-          className="absolute top-full left-0 w-full bg-gray-200 dark:bg-gray-800 z-50 shadow-md rounded-md overflow-hidden"
+          className="absolute top-full left-0 w-full bg-neutral dark:bg-secondary z-50 shadow-md rounded-md overflow-hidden"
         >
           {["Home", "Projects", "About", "Contacts", "Blogs"].map((link, index) => (
             <motion.a
               key={index}
               href="#"
-              className="block px-6 py-3 text-lg font-semibold text-gray-800 dark:text-white transition-all relative group"
+              className="block px-6 py-1 text-sm font-semibold text-gray-800 hover:text-black dark:text-gray-400 dark:hover:text-white transition-all relative group"
               whileHover={{ scale: 1.05, x: 10 }} // Indent text on hover
             >
               {link}
