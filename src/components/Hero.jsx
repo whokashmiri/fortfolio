@@ -12,7 +12,7 @@ export default function Hero() {
           className="text-black dark:text-white  relative w-fit bg-slate-200 dark:bg-[#0e2d06]  mr-4 rounded-xl text-lg m-4"
           
         >
-         <span className="animate-ping"
+         <span className="animate-ping text-xl"
          
          > ● </span> 2 projects left in February
         </motion.p>

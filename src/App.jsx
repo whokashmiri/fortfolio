@@ -5,6 +5,8 @@ import Hero from "./components/Hero";
 import  Projects  from "./components/Projects";
 import Clients from "./components/Clients";
 import Services from "./components/Services";
+import Reviews from "./components/Reviews";
+import Questions from "./components/Questions";
 
 
 
@@ -23,6 +25,8 @@ function App() {
           <Projects/>
           <Clients/>
           <Services/>
+          <Reviews/>
+          <Questions/>
         
         </>
       )}
