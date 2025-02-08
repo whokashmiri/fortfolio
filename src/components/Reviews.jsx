@@ -4,10 +4,10 @@ export default function Reviews() {
     
     return (
     <>
-      <div className="h-[60vh] flex flex-col items-center justify-center bg-gray-100 dark:bg-primary ">
-        <div className="w-2/3 h-[90%] bg-white dark:bg-secondary p-10 rounded-xl shadow-lg flex flex-col items-center ">
+      <div className="min-h-fit w-screen flex flex-col items-center justify-center bg-gray-100 dark:bg-primary p-14">
+        <div className="w-[62%] h-[95%] bg-white dark:bg-secondary p-10 rounded-xl shadow-lg flex flex-col items-center ">
           {/* Review Stars */}
-          <div className=" font-bold   mb-4 text-yellow-400 dark:text-yellow-500 text-3xl">
+          <div className=" font-bold   mb-2 text-yellow-400 dark:text-yellow-500 text-3xl">
             ★ ★ ★ ★ ☆
           </div>
   

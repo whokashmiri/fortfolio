@@ -7,6 +7,8 @@ import Clients from "./components/Clients";
 import Services from "./components/Services";
 import Reviews from "./components/Reviews";
 import Questions from "./components/Questions";
+import Matched from "./components/Matched";
+import Socials from "./components/Socials";
 
 
 
@@ -27,6 +29,8 @@ function App() {
           <Services/>
           <Reviews/>
           <Questions/>
+          <Matched/>
+          <Socials/>
         
         </>
       )}

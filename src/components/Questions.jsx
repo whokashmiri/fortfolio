@@ -24,8 +24,8 @@ const faqs = [
 export default function Questions() {
     const [openIndex, setOpenIndex] = useState(null);
     return (
-      <div className="flex flex-col justify-center items-center h-fit bg-gray-100 dark:bg-primary ">
-        <div className="text-center max-w-2xl mt-8 text-black dark:text-white">
+      <div className="min-h-fit w-screen flex flex-col items-center justify-center bg-gray-100 dark:bg-primary ">
+        <div className="text-center max-w-xl  text-black  dark:text-white">
           <h2 className="text-3xl font-bold  mb-4">Got Questions?</h2>
           <p className="text-gray-400 text-lg">
             Explore the most common questions about my services and workflow. If you don’t find what you’re looking for, feel free to reach out!
@@ -36,8 +36,8 @@ export default function Questions() {
 {/* FAQ */}
 
 
-        <div className="flex justify-center items-center h-screen  bg-gray-100 dark:bg-primary ">
-      <div className="max-w-2xl w-screen bg-accent text-black dark:bg-secondary p-6 rounded-xl shadow-lg">
+        <div className="flex justify-center items-center h-screen w-screen  bg-gray-100 dark:bg-primary md:px-16">
+      <div className=" w-[61%] bg-accent text-black dark:bg-secondary p-6 rounded-xl shadow-lg">
 
         {faqs.map((section, sectionIdx) => (
           <div key={sectionIdx} className="mb-4 text-black dark:text-white dark:bg-secondary">
