@@ -10,6 +10,7 @@ import Questions from "./components/Questions";
 import Matched from "./components/Matched";
 import Socials from "./components/Socials";
 import Contact from "./components/Contact";
+import TechStack from "./components/TechStack";
 
 
 
@@ -27,6 +28,7 @@ function App() {
           <Hero/>
           <Projects/>
           <Clients/>
+          <TechStack/>
           <Services/>
           <Reviews/>
           <Questions/>
