@@ -1,6 +1,6 @@
 const Matched = () => {
     return (
-      <div className="flex justify-center items-center h-screen w-screen  bg-gray-100 dark:bg-primary md:px-16">
+      <div className="flex justify-center items-center h-screen w-screen  bg-accent dark:bg-primary md:px-16">
         <div className=" w-[61%] h-[90%] bg-accent text-black dark:bg-secondary  rounded-3xl shadow-lg flex justify-center items-center flex-col ">
           <h1 className="text-4xl text-gray-900 dark:text-white font-bold mb-2">We are matched</h1>
           <h3 className="text-lg text-gray-600 dark:text-gray-300 mb-4">If you’re here, it’s meant to be. Let’s turn your vision into reality</h3>

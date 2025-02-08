@@ -3,7 +3,7 @@ import { ArrowUpRightIcon } from "lucide-react";
 const Contact = () => {
     return (
       <>
-        <div className="min-h-fit flex flex-col justify-center items-center h-fit w-screen bg-gray-100 dark:bg-primary p-14">
+        <div className="min-h-fit flex flex-col justify-center items-center h-fit w-screen bg-accent dark:bg-primary p-14">
           <div className="w-[61%] h-[90%] bg-accent text-black dark:bg-secondary rounded-3xl shadow-lg flex flex-col justify-start items-center p-8">
           <h1 className="text-4xl text-gray-900 dark:text-white font-bold mb-2  text-start">RING A BELL!</h1>
             
@@ -36,7 +36,7 @@ const Contact = () => {
             </form>
   
             {/* Contact Info Section */}
-            <div className="w-full mt-6 p-6 shadow-lg rounded-2xl">
+            <div className="w-full mt-6 p-6 rounded-2xl">
               <h1 className="text-4xl text-gray-900 dark:text-white font-bold mb-2">RING A BELL!</h1>
               <p className="text-lg text-gray-600 dark:text-gray-300 mb-4">
                 Reach out and let&apos;s create something amazing together. Let&apos;s achieve greatness.

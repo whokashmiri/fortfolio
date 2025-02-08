@@ -24,7 +24,7 @@ const faqs = [
 export default function Questions() {
     const [openIndex, setOpenIndex] = useState(null);
     return (
-      <div className="min-h-fit w-screen flex flex-col items-center justify-center bg-gray-100 dark:bg-primary ">
+      <div className="min-h-fit w-screen flex flex-col items-center justify-center bg-accent dark:bg-primary ">
         <div className="text-center max-w-xl  text-black  dark:text-white">
           <h2 className="text-3xl font-bold  mb-4">Got Questions?</h2>
           <p className="text-gray-400 text-lg">
@@ -36,7 +36,7 @@ export default function Questions() {
 {/* FAQ */}
 
 
-        <div className="flex justify-center items-center h-screen w-screen  bg-gray-100 dark:bg-primary md:px-16">
+        <div className="flex justify-center items-center h-screen w-screen  bg-accent dark:bg-primary md:px-16">
       <div className=" w-[61%] bg-accent text-black dark:bg-secondary p-6 rounded-xl shadow-lg">
 
         {faqs.map((section, sectionIdx) => (

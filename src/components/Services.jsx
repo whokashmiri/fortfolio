@@ -1,6 +1,6 @@
 const Services = () => {
     return (
-      <div className="min-h-screen flex flex-col items-center justify-center bg-gray-100 dark:bg-primary p-14">
+      <div className="min-h-screen flex flex-col items-center justify-center  bg-accent dark:bg-primary p-14">
         <div className="w-[65%] h-fit flex flex-col justify-between items-start text-black  dark:text-white  rounded-2xl pl-5 pr-5">
         <h1 className="text-4xl font-bold text-gray-800 dark:text-white mb-8"> Services I Provide</h1>
         

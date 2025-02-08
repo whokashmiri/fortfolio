@@ -13,7 +13,7 @@ import {
 export default function Socials() {
     const [hovered, setHovered] = useState(false);
   return (
-    <div className="min-h-fit flex flex-col justify-center items-center h-fit w-screen  bg-gray-100 dark:bg-primary">
+    <div className="min-h-fit flex flex-col justify-center items-center h-fit w-screen  bg-accent dark:bg-primary">
          <div className="w-[58%] h-fit flex justify-between items-center text-black  dark:text-white  rounded-2xl p-6">
         <h1 className="text-3xl font-bold">Let&apos;s Connect</h1>
         <button
@@ -23,7 +23,7 @@ export default function Socials() {
           <ArrowRight size={20} className="" />
         </button>
       </div>
-      <div className="w-[58%] text-black rounded-3xl shadow-lg flex justify-center items-center ">
+      <div className="w-[58%] text-black rounded-3xl  flex justify-center items-center ">
         {/* First Section */}
         <div className="flex flex-col md:flex-row  space-x-1 ">
           {/* Upwork Card */}

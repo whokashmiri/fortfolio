@@ -2,6 +2,8 @@ import { motion } from "framer-motion";
 import heroImage from "../assets/bg-hero.png"; // Replace with your image path
 
 export default function Hero() {
+  const month = new Date();
+  const monthName = month.toLocaleString('en-US', {month:'long'})
   return (
     <section className="flex flex-col md:flex-row items-center justify-center h-screen md:px-16  bg-accent dark:bg-primary ">
       {/* Left Section (Text) */}
@@ -14,7 +16,7 @@ export default function Hero() {
         >
          <span className="animate-ping text-xl"
          
-         > ● </span> 2 projects left in February
+         > ● </span> 2 projects left in {monthName}
         </motion.p>
 
         {/* Hero Text */}
