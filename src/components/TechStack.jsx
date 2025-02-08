@@ -18,6 +18,7 @@ import { FaNode } from "react-icons/fa";
 
 export default function TechStack() {
     const [hovered, setHovered] = useState(false);
+    const [hovere, setHovere] = useState(false);
   return (
     <>
     <div className="min-h-fit flex flex-col justify-center items-center  h-fit w-screen  bg-gray-100 dark:bg-primary">
@@ -99,11 +100,11 @@ export default function TechStack() {
           {/* X (Twitter) Card */}
       <motion.div
   className="w-[240px] h-[240px] rounded-3xl shadow-lg cursor-pointer flex items-center justify-center transition-all bg-black dark:bg-white"
-  onHoverStart={() => setHovered(true)}
-  onHoverEnd={() => setHovered(false)}
+  onHoverStart={() => setHovere(true)}
+  onHoverEnd={() => setHovere(false)}
   animate={{
-    backgroundImage: hovered
-      ? "radial-gradient(circle at top, #F42C04 0%, white 100%)"
+    backgroundImage: hovere
+      ? "radial-gradient(circle at top, yellow 0%, white 100%)"
       : "",
   }}
   transition={{ 
@@ -111,11 +112,11 @@ export default function TechStack() {
   }}
 >
   <motion.div
-    animate={{ scale: hovered ? 1.4 : 1, rotate: hovered ? -6 : 0 }}
+    animate={{ scale: hovere ? 1.4 : 1, rotate: hovere ? -6 : 0 }}
     transition={{ duration: 0.7, ease: "easeInOut" }}
     className="text-white dark:text-black"
   >
-    <IoLogoJavascript size={40} />
+    <IoLogoJavascript size={80} />
   </motion.div>
 </motion.div>
 
