@@ -1,5 +1,6 @@
-import { hover, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
+import { useState } from "react";
 import {
   FaUpwork,
   FaXTwitter,
@@ -10,6 +11,7 @@ import {
 } from "react-icons/fa6";
 
 export default function Socials() {
+    const [hovered, setHovered] = useState(false);
   return (
     <div className="min-h-fit flex flex-col justify-center items-center h-fit w-screen  bg-gray-100 dark:bg-primary">
          <div className="w-[58%] h-fit flex justify-between items-center text-black  dark:text-white  rounded-2xl p-6">
@@ -27,10 +29,10 @@ export default function Socials() {
           {/* Upwork Card */}
           <motion.div
             whileHover={{ borderWidth: 1, borderColor: "black" , }}
-            className="bg-accent text-black dark:bg-secondary dark:text-yellow-300   w-[240px] h-[240px] rounded-3xl shadow-lg cursor-pointer flex flex-col items-center justify-center  transition-all mr-3"
+            className="bg-accent text-[#0E3B43] dark:bg-secondary dark:text-yellow-300   w-[240px] h-[240px] rounded-3xl shadow-lg cursor-pointer flex flex-col items-center justify-center  transition-all mr-3"
           >
             <motion.h2
-             whileHover={{ color: "gray" }}
+             whileHover={{ color: "#BBDB9B" }}
              className="mb-9 text-2xl font-mono text-current transition translate-x-1 duration-200"
             >
              Hire me on
@@ -51,14 +53,33 @@ export default function Socials() {
           </motion.div>
 
           {/* X (Twitter) Card */}
-          <motion.div
-            whileHover={{ borderWidth: 1, borderColor: "white" }}
-            className="bg-secondary dark:bg-accent text-white dark:text-black w-[240px] h-[240px] rounded-3xl shadow-lg cursor-pointer flex items-center justify-center transition-all "
-          >
-            <motion.div whileHover={{ scale: 1.4,  rotate: -6  }}>
-              <FaXTwitter size={40} />
-            </motion.div>
-          </motion.div>
+      <motion.div
+  className="w-[240px] h-[240px] rounded-3xl shadow-lg cursor-pointer flex items-center justify-center transition-all bg-black dark:bg-white"
+  onHoverStart={() => setHovered(true)}
+  onHoverEnd={() => setHovered(false)}
+  animate={{
+    backgroundImage: hovered
+      ? "radial-gradient(circle at top, #F42C04 0%, white 100%)"
+      : "",
+  }}
+  transition={{ 
+    duration: 0.7, ease: "easeInOut",
+  }}
+>
+  <motion.div
+    animate={{ scale: hovered ? 1.4 : 1, rotate: hovered ? -6 : 0 }}
+    transition={{ duration: 0.7, ease: "easeInOut" }}
+    className="text-white dark:text-black"
+  >
+    <FaXTwitter size={40} />
+  </motion.div>
+</motion.div>
+
+
+
+
+
+
         </div>
 
         {/* Second Section */}

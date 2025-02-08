@@ -9,6 +9,7 @@ import Reviews from "./components/Reviews";
 import Questions from "./components/Questions";
 import Matched from "./components/Matched";
 import Socials from "./components/Socials";
+import Contact from "./components/Contact";
 
 
 
@@ -31,6 +32,7 @@ function App() {
           <Questions/>
           <Matched/>
           <Socials/>
+          <Contact/>
         
         </>
       )}

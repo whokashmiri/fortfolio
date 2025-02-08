@@ -3,7 +3,7 @@ const Matched = () => {
       <div className="flex justify-center items-center h-screen w-screen  bg-gray-100 dark:bg-primary md:px-16">
         <div className=" w-[61%] h-[90%] bg-accent text-black dark:bg-secondary  rounded-3xl shadow-lg flex justify-center items-center flex-col ">
           <h1 className="text-4xl text-gray-900 dark:text-white font-bold mb-2">We are matched</h1>
-          <h3 className="text-lg text-gray-600 dark:text-gray-300mb-4">If you’re here, it’s meant to be. Let’s turn your vision into reality</h3>
+          <h3 className="text-lg text-gray-600 dark:text-gray-300 mb-4">If you’re here, it’s meant to be. Let’s turn your vision into reality</h3>
           <div className="flex justify-center space-x-4 m-7">
           <button className="px-6 py-3 bg-black text-white dark:text-black font-semibold rounded-3xl hover:bg-gray-800 transition dark:bg-white">
             Book a Call
