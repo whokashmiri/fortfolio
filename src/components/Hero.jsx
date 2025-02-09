@@ -40,7 +40,7 @@ export default function Hero() {
       </div>
 
       {/* Right Section (Image) */}
-      <div className="w-full md:w-2/5 flex justify-center overflow-hidden pb-[113px] md:mt-0">
+      <div className="w-full md:w-2/5 flex justify-center overflow-hidden pb-[90px] md:mt-0">
         <img
           src={heroImage}
           alt="Aaqib Mir"

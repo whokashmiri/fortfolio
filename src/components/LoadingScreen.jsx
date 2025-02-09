@@ -2,14 +2,13 @@ import { useEffect, useState } from "react";
 
 // eslint-disable-next-line react/prop-types
 const LoadingScreen = ({ onFinish }) => {
-  const [loadingText, setLoadingText] = useState("Loading...");
+  const [loadingText, setLoadingText] = useState("...");
 
   useEffect(() => {
     const phrases = [
-      "Driving to Los Santos...",
-      "Buying Hot Coffee...",
-      "Escaping 5-Star Wanted Level...",
-      "Customizing Lowrider...",
+      "Driving to Dal Gate...",
+      "Buying Hot Noon-Chai...",
+      "Customizing My Imaginary Car...",
       "Loading Missions..."
     ];
     
@@ -17,20 +16,20 @@ const LoadingScreen = ({ onFinish }) => {
     const interval = setInterval(() => {
       setLoadingText(phrases[index]);
       index = (index + 1) % phrases.length;
-    }, 2000);
+    }, 500);
 
     setTimeout(() => {
       clearInterval(interval);
       onFinish();
-    }, 6000);
+    }, 3000);
     
     return () => clearInterval(interval);
   }, [onFinish]);
 
   return (
     <div className="fixed inset-0 flex flex-col items-center justify-center bg-black  text-2xl">
-      <h1 className="font-extrabold text-4xl mb-4 text-white">Welcome to Aaqib&apos;s World</h1>
-      <p>{loadingText}</p>
+      <h1 className="font-extrabold text-3xl lg:text-9xl mb-4 text-yellow-500">LOADING...</h1>
+      <p className="text-white text-lg lg:text-5xl">{loadingText}</p>
     </div>
   );
 };

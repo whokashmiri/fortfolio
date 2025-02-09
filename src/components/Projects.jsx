@@ -30,11 +30,11 @@ const Projects = () => {
             alt="Project 1"
             className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 rounded-2xl"  
           />
-          <button
-            className="absolute bottom-2 left-1/2 transform -translate-x-1/2 translate-y-5 opacity-0 flex items-center justify-between px-5 py-3 w-[80%] bg-white text-black font-semibold transition-all duration-500 ease-in-out group-hover:translate-y-0 group-hover:opacity-100 rounded-3xl shadow-lg hover:shadow-3xl hover:scale-105 border-double border-2 border-gray-600" 
+           <button
+            className="absolute bottom-2 left-1/2 transform -translate-x-1/2 translate-y-5 opacity-0 flex items-center justify-between px-5 py-3 w-[80%] bg-white text-black font-semibold transition-all duration-500 ease-in-out group-hover:translate-y-0 group-hover:opacity-100 rounded-3xl shadow-lg hover:shadow-3xl hover:scale-105 border-double border-2 border-gray-600"
             onClick={() => window.open("https://github.com/", "_blank")}
           >
-            GoExalt System 
+          Exalt System
             <span className="text-slate-400 ml-3">. Website</span>
             <MoveUpRight className="ml-3" />
           </button>

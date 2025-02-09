@@ -11,7 +11,7 @@ import Matched from "./components/Matched";
 import Socials from "./components/Socials";
 import Contact from "./components/Contact";
 import TechStack from "./components/TechStack";
-import Blogs from "./components/Blogs";
+
 
 
 
@@ -24,7 +24,7 @@ function App() {
         <LoadingScreen onFinish={() => setLoading(false)} />
       ) : (
         <>
-         
+         <div className="overflow-y-hidden">
           <Navbar />
           <Hero/>
           <Projects/>
@@ -36,8 +36,8 @@ function App() {
           <Matched/>
           <Socials/>
           <Contact/>
-          <Blogs/>
-        
+          
+          </div>
         </>
       )}
     </>
