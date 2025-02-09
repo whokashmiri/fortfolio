@@ -1,7 +1,27 @@
 import { motion } from "framer-motion";
-import heroImage from "../assets/bg-hero.png"; // Replace with your image path
+import heroImage from "../assets/bg-hero.png"; 
+// import { useState } from "react";
+
+
+const images = [
+ 
+  "https://images.pexels.com/photos/29214791/pexels-photo-29214791/free-photo-of-breathtaking-view-of-snowcapped-sonamarg-mountains.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+  "https://images.pexels.com/photos/29214786/pexels-photo-29214786/free-photo-of-serene-forest-landscape-in-kashmir.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+  heroImage,
+  "https://images.pexels.com/photos/18527335/pexels-photo-18527335/free-photo-of-trees-in-autumn.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+  "https://images.pexels.com/photos/15363406/pexels-photo-15363406/free-photo-of-feel-the-warmth-of-kashmir-with-snowfall.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+  "https://images.pexels.com/photos/29469923/pexels-photo-29469923/free-photo-of-vivid-saffron-flower-at-sunset-in-pampore.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+  "https://images.pexels.com/photos/29329806/pexels-photo-29329806/free-photo-of-serene-autumn-forest-pathway-landscape.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+  "https://images.pexels.com/photos/13142625/pexels-photo-13142625.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+  "https://images.pexels.com/photos/7824511/pexels-photo-7824511.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+  "https://images.pexels.com/photos/20655200/pexels-photo-20655200/free-photo-of-boats-in-a-lake-in-a-mountain-valley.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+  "https://images.pexels.com/photos/15548423/pexels-photo-15548423/free-photo-of-boats-on-a-lake-with-a-view-of-the-mountain-range.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+];
+
+const text = "WHOKASHMIRI";
 
 export default function Hero() {
+  // const [hover , setHover] = useState("@WHOK4SHMIR1")
   const month = new Date();
   const monthName = month.toLocaleString('en-US', {month:'long'})
   return (
@@ -40,12 +60,36 @@ export default function Hero() {
       </div>
 
       {/* Right Section (Image) */}
-      <div className="w-full md:w-2/5 flex justify-center overflow-hidden pb-[90px] md:mt-0">
-        <img
+      <div className="w-fit md:w-2/5 flex justify-center overflow-hidden  md:mt-0">
+     
+
+      <div className="flex justify-center items-center h-screen ">
+      <h1 className="text-8xl font-extrabold font-mono uppercase text-center ">
+        {text.split("").map((char, index) => (
+          <>
+            <span
+              key={index}
+              className="relative inline-block"
+              style={{
+                backgroundImage: `url(${images[index % images.length]})`,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+              }}
+            >
+              {char}
+            </span>
+            {(index + 1) % 4 === 0 && <br key={`br-${index}`} />}
+          </>
+        ))}
+      </h1>
+    </div>
+        {/* <img
           src={heroImage}
           alt="Aaqib Mir"
-          className="rounded-lg  object-contain w-full max-w-sm"
-        />
+          className="rounded-lg  object-cover w-fit max-w-sm"
+        /> */}
       </div>
 
       </div>
