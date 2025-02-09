@@ -11,6 +11,7 @@ import Matched from "./components/Matched";
 import Socials from "./components/Socials";
 import Contact from "./components/Contact";
 import TechStack from "./components/TechStack";
+import Blogs from "./components/Blogs";
 
 
 
@@ -35,6 +36,7 @@ function App() {
           <Matched/>
           <Socials/>
           <Contact/>
+          <Blogs/>
         
         </>
       )}

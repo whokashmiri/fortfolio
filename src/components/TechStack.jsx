@@ -20,9 +20,9 @@ export default function TechStack() {
     const [hovere, setHovere] = useState(false);
   return (
     <>
-    <div className="min-h-fit flex flex-col justify-center items-center  h-fit w-screen  bg-accent dark:bg-primary">
-         <div className="w-[58%] h-fit flex justify-between items-center mt-11 text-black  dark:text-white  rounded-2xl p-6">
-        <h1 className="text-3xl font-bold">Fundamental Stack & Technologies</h1>
+    <div className="min-h-fit flex flex-col justify-center items-center  h-fit   bg-accent dark:bg-primary">
+         <div className="w-[58%] h-fit flex justify-between items-center mt-11 text-black  dark:text-white  rounded-2xl pt-6 pb-7">
+        <h1 className="text-3xl font-bold">Programming Languages & Frameworks</h1>
         <button
           className="flex items-center gap-2 px-2 py-2  bg-white dark:text-black hover:scale-105 rounded-full transition-all duration-300 shadow-xl"
           onClick={() => window.open("https://github.com/whokashmiri?tab=repositories", "_blank")}
@@ -30,7 +30,7 @@ export default function TechStack() {
           <ArrowRight size={20} className="" />
         </button>
       </div>
-      <div className="w-[58%] text-black rounded-3xl  flex justify-center items-center ">
+      <div className="w-[58%] text-black rounded-3xl  flex justify-center  items-center ">
         {/* First Section */}
         <div className="flex flex-col md:flex-row  space-x-1 ">
           {/* Upwork Card */}
@@ -50,11 +50,11 @@ export default function TechStack() {
           </motion.div>
 
              {/* Second Section */}
-        <div className="grid grid-cols-2 gap-2 ml-5  place-items-center   items-center">
+        <div className="grid grid-cols-2 gap-2  place-items-center   items-center">
           {/* Email */}
           <motion.div
             whileHover={{ scale: 1.01, rotate: -6 }} 
-            className="bg-accent dark:text-white hover:text-green-500 dark:hover:text-green-600 dark:bg-secondary w-32 h-[115px] rounded-xl shadow-lg flex items-center justify-center cursor-pointer"
+            className="bg-accent dark:text-white hover:text-green-500 dark:hover:text-green-600 dark:bg-secondary w-36 h-[115px] rounded-xl shadow-lg flex items-center justify-center cursor-pointer"
 >
         <motion.div>
                 <SiSpringboot size={60} className="text-green-700 hover:text-green-500" />
@@ -64,7 +64,7 @@ export default function TechStack() {
 
         <motion.div
             whileHover={{ scale: 1.01, rotate: -6 }} 
-            className="bg-accent dark:text-white hover:text-green-500 dark:hover:text-green-600 dark:bg-secondary w-32 h-[115px] rounded-xl shadow-lg flex items-center justify-center cursor-pointer"
+            className="bg-accent dark:text-white hover:text-green-500 dark:hover:text-green-600 dark:bg-secondary w-36 h-[115px] rounded-xl shadow-lg flex items-center justify-center cursor-pointer"
 >
         <motion.div>
                 <FaHtml5 size={60} className="text-yellow-700 hover:text-yellow-500" />
@@ -75,7 +75,7 @@ export default function TechStack() {
 
         <motion.div
             whileHover={{ scale: 1.01, rotate: -6 }} 
-            className="bg-accent dark:text-white hover:text-green-500 dark:hover:text-green-600 dark:bg-secondary w-32 h-[115px] rounded-xl shadow-lg flex items-center justify-center cursor-pointer"
+            className="bg-accent dark:text-white hover:text-green-500 dark:hover:text-green-600 dark:bg-secondary w-36 h-[115px] rounded-xl shadow-lg flex items-center justify-center cursor-pointer"
 >
         <motion.div>
                 <FaGithubAlt size={60} className="text-teal-700 hover:text-teal-500" />
@@ -86,7 +86,7 @@ export default function TechStack() {
 
         <motion.div
             whileHover={{ scale: 1.01, rotate: -6 }} 
-            className="bg-accent dark:text-white hover:text-green-500 dark:hover:text-green-600 dark:bg-secondary w-32 h-[115px] rounded-xl shadow-lg flex items-center justify-center cursor-pointer"
+            className="bg-accent dark:text-white hover:text-green-500 dark:hover:text-green-600 dark:bg-secondary w-36 h-[115px] rounded-xl shadow-lg flex items-center justify-center cursor-pointer"
 >
         <motion.div>
                 <IoLogoCss3 size={60} className="text-blue-700 hover:text-blue-500" />
@@ -133,8 +133,8 @@ export default function TechStack() {
 
 
 
-    <div className="min-h-fit flex flex-col justify-center items-center  h-fit w-screen  bg-accent dark:bg-primary">
-         <div className="w-[58%] h-fit flex justify-between items-center text-black  dark:text-white  rounded-2xl p-6">
+    <div className="min-h-fit flex flex-col justify-center items-center  h-fit   bg-accent dark:bg-primary">
+         <div className="w-[58%] h-fit flex justify-between items-center text-black  dark:text-white  rounded-2xl p-1">
         
     
       </div>
@@ -142,11 +142,11 @@ export default function TechStack() {
     
         <div className="flex flex-col md:flex-row  space-x-1 ">
          
-        <div className="grid grid-cols-2 gap-2 ml-5  place-items-center   items-center">
+        <div className="grid grid-cols-2 gap-2  place-items-center items-center">
           {/* Email */}
           <motion.div
             whileHover={{ scale: 1.01, rotate: -6 }} 
-            className="bg-accent dark:text-white hover:text-green-500 dark:hover:text-green-600 dark:bg-secondary w-32 h-[115px] rounded-xl shadow-lg flex items-center justify-center cursor-pointer"
+            className="bg-accent dark:text-white hover:text-green-500 dark:hover:text-green-600 dark:bg-secondary w-36 h-[115px] rounded-xl shadow-lg flex items-center justify-center cursor-pointer"
 >
         <motion.div>
                 <FaReact size={60} className="text-teal-700 hover:text-teal-500" />
@@ -157,9 +157,8 @@ export default function TechStack() {
 
         <motion.div
 
-          whileHover={{ scale: 1.01, rotate: -6 }} 
-           hileHover={{ scale: 1.01, rotate: -6 }} 
-            className="bg-accent dark:text-white hover:text-green-500 dark:hover:text-green-600 dark:bg-secondary w-32 h-[115px] rounded-xl shadow-lg flex items-center justify-center cursor-pointer">
+          whileHover={{ scale: 1.01, rotate: -6 }}  
+            className="bg-accent dark:text-white hover:text-green-500 dark:hover:text-green-600 dark:bg-secondary w-36 h-[115px] rounded-xl shadow-lg flex items-center justify-center cursor-pointer">
             <motion.div >
               <SiTailwindcss size={60} className="text-[#00bcff] hover:text-[#0096cc]" />
             </motion.div>
@@ -168,7 +167,7 @@ export default function TechStack() {
           
           <motion.div
            whileHover={{ scale: 1.01, rotate: -6 }} 
-          className="bg-secondary text-white dark:bg-accent hover:text-white  w-32 h-[115px] rounded-xl shadow-lg flex items-center justify-center cursor-pointer">
+          className="bg-secondary text-white dark:bg-accent hover:text-white  w-36 h-[115px] rounded-xl shadow-lg flex items-center justify-center cursor-pointer">
             <motion.div >
               <RiNextjsFill size={60} className="dark:text-slate-950 dark:hover:text-slate-900
               "/>
@@ -178,7 +177,7 @@ export default function TechStack() {
           {/* Instagram */}
           <motion.div
            whileHover={{ scale: 1.01, rotate: -6 }} 
-          className="bg-accent dark:text-white dark:bg-secondary hover:text-green-600  w-32 h-[115px] dark:hover:text-red-600 rounded-xl shadow-lg flex items-center justify-center cursor-pointer">
+          className="bg-accent dark:text-white dark:bg-secondary hover:text-green-600  w-36 h-[115px] dark:hover:text-red-600 rounded-xl shadow-lg flex items-center justify-center cursor-pointer">
             <motion.div >
               <FaNode size={60} className="dark:text-green-700 dark:hover:text-green-600" />
             </motion.div>

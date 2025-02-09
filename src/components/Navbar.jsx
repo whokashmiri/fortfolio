@@ -69,7 +69,7 @@ export default function Navbar() {
           {["Home", "Projects", "About", "Contacts", "Blogs"].map((link, index) => (
             <motion.a
               key={index}
-              href="#"
+              href={`${link.toLowerCase()}`}
               className="block px-6 py-1 text-sm font-semibold text-gray-800 hover:text-black dark:text-gray-400 dark:hover:text-white transition-all relative group"
               whileHover={{ scale: 1.05, x: 10 }} // Indent text on hover
             >
