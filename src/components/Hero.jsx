@@ -63,8 +63,8 @@ export default function Hero() {
       <div className="w-fit md:w-2/5 flex justify-center overflow-hidden  md:mt-0">
      
 
-      <div className="flex justify-center items-center h-screen ">
-      <h1 className="text-8xl font-extrabold font-mono uppercase text-center ">
+      <div className="relative flex justify-center items-center h-screen ">
+      <h1 className="text-8xl font-extrabold  rounded-2xl font-mono uppercase text-center ">
         {text.split("").map((char, index) => (
           <>
             <span
@@ -84,12 +84,14 @@ export default function Hero() {
           </>
         ))}
       </h1>
-    </div>
-        {/* <img
+
+      <img
           src={heroImage}
           alt="Aaqib Mir"
-          className="rounded-lg  object-cover w-fit max-w-sm"
-        /> */}
+          className="rounded-lg absolute h-96 mb-20  object-cover w-fit max-w-sm"
+        />
+    </div>
+       
       </div>
 
       </div>
