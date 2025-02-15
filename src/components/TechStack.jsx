@@ -24,7 +24,7 @@ export default function TechStack() {
          <div className="w-[58%] h-fit flex justify-between items-center mt-11 text-black  dark:text-white  rounded-2xl pt-6 pb-7">
         <h1 className="text-3xl font-bold">Programming Languages & Frameworks</h1>
         <button
-          className="flex items-center gap-2 px-2 py-2  bg-white dark:text-black hover:scale-105 rounded-full transition-all duration-300 shadow-xl"
+          className="flex items-center  px-2 py-2  bg-white dark:text-black hover:scale-105 rounded-full transition-all duration-300 shadow-xl"
           onClick={() => window.open("https://github.com/whokashmiri?tab=repositories", "_blank")}
         >
           <ArrowRight size={20} className="" />
@@ -50,7 +50,7 @@ export default function TechStack() {
           </motion.div>
 
              {/* Second Section */}
-        <div className="grid grid-cols-2 gap-2  place-items-center   items-center">
+        <div className="grid grid-cols-2 gap-2    items-center">
           {/* Email */}
           <motion.div
             whileHover={{ scale: 1.01, rotate: -6 }} 
@@ -142,7 +142,7 @@ export default function TechStack() {
     
         <div className="flex flex-col md:flex-row  space-x-1 ">
          
-        <div className="grid grid-cols-2 gap-2  place-items-center items-center">
+        <div className="grid grid-cols-2   place-items-center items-center">
           {/* Email */}
           <motion.div
             whileHover={{ scale: 1.01, rotate: -6 }} 
